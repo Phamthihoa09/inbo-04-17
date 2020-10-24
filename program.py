@@ -9,10 +9,6 @@ def hello_world():
 def hello_world_v2():
     return 'Another text'
 
-@app.route('/capchik')
-def capchik():
-    return 'CAPCHIK task'
-
 @app.route('/edmanuk')
 def edmanuk():
     return 'Good day!!!' 
