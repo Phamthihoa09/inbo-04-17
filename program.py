@@ -23,7 +23,7 @@ def capchik():
 
 @app.route('/shistick98')
 def shitick98():
-    return 'I am Dmitrii Shesterikov inbo-04-17cd'
+    return 'I am Dmitrii Shesterikov, inbo-04-17'
 
 @app.route('/user937')
 def user937():
