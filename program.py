@@ -40,3 +40,7 @@ def about():
 @app.route('/megurt')
 def megurtfunc():
     return 'test task'
+
+@app.route('/NewPage')
+def megurtfunc():
+    return 'Welcome to New page'
