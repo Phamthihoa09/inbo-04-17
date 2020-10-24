@@ -25,9 +25,9 @@ def capchik():
 def shitick98():
     return 'I am Dmitrii Shesterikov inbo-04-17cd'
 
-@app.route('/user937')
-def user937():
-    return 'user937 task'
+@app.route('/user938')
+def user938():
+    return 'user938 task'
 
 @app.route('/Kubirill')
 def kubirill():
