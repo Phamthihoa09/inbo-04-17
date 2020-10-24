@@ -11,8 +11,12 @@ def hello_world_v2():
 
 @app.route('/capchik')
 def capchik():
-    return 'CAPCHIK task'
+    return 'CAPCHIK cool task'
 
 @app.route('/Kubirill')
 def capchik():
     return 'He is NintendoBoy'
+
+@app.route('/de4d10ck')
+def about():
+    return 'Welcome to my page'
