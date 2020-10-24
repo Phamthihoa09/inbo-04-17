@@ -14,9 +14,12 @@ def capchik():
     return 'CAPCHIK cool task'
 
 @app.route('/Kubirill')
-def capchik():
+def kubirill():
     return 'He is NintendoBoy'
 
 @app.route('/de4d10ck')
 def about():
     return 'Welcome to my page'
+@app.route('/megurt')
+def megurtfunc():
+    return 'test task'
