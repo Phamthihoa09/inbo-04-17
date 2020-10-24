@@ -12,3 +12,7 @@ def hello_world_v2():
 @app.route('/capchik')
 def capchik():
     return 'CAPCHIK cool task'
+
+@app.route('/megurt')
+def megurtfunc():
+    return 'test task'
