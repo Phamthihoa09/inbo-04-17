@@ -11,4 +11,4 @@ def hello_world_v2():
 
 @app.route('/edmanuk')
 def edmanuk():
-    return 'Good day!!!' 
+    return 'Good day!!!'
