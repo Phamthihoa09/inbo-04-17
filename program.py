@@ -15,7 +15,7 @@ def Ml9799():
 
 @app.route('/edmanuk')
 def edmanuk():
-    return 'Good evening!!!'
+    return 'Good evening!'
 
 @app.route('/capchik')
 def capchik():
