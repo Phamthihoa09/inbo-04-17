@@ -9,6 +9,10 @@ def hello_world():
 def hello_world_v2():
     return 'Another text'
 
+@app.route('/Ml9799')
+def Ml9799():
+    return 'Ml9799 write in VScode'
+
 @app.route('/edmanuk')
 def edmanuk():
     return 'Good evening!!!'
@@ -17,9 +21,13 @@ def edmanuk():
 def capchik():
     return 'CAPCHIK cool task'
 
-@app.route('/user937')
-def user937():
-    return 'user937 task'
+@app.route('/shistick98')
+def shitick98():
+    return 'I am Dmitrii Shesterikov, inbo-04-17'
+
+@app.route('/user938')
+def user938():
+    return 'user938 task'
 
 @app.route('/Kubirill')
 def kubirill():
