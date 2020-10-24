@@ -16,6 +16,9 @@ def edmanuk():
 @app.route('/capchik')
 def capchik():
     return 'CAPCHIK cool task'
+@app.route('/shistick98')
+def shitick98():
+    return 'I am Dmitrii Shesterikov inbo-04-17cd'
 
 @app.route('/user937')
 def user937():
