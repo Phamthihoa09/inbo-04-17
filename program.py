@@ -10,5 +10,5 @@ def hello_world_v2():
     return 'Another text'
 
 @app.route('/shistick98')
-def capchik():
+def shitick98():
     return 'I am Dmitrii Shesterikov inbo-04-17cd'
