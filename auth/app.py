@@ -2,20 +2,19 @@ from flask import Flask
 from flask import flash, redirect, render_template, request, session, abort
 import os
 from sqlalchemy.orm import sessionmaker
-from .models import *
-from program import app
+from models import *
 
+app = Flask(__name__, static_folder='static')
 engine = create_engine('sqlite:///main.db', echo=True)
-Base = declarative_base()
 
 
-@app.route('/home')
+@app.route('/')
 def home():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
         return render_template('index.html',
-                               log_out=True)
+                               log_out=False)
 
 
 @app.route('/login', methods=['POST'])
@@ -39,3 +38,8 @@ def do_admin_login():
 def logout():
     session['logged_in'] = False
     return home()
+
+
+if __name__ == "__main__":
+    app.secret_key = os.urandom(12)
+    app.run(debug=True, port=4000)
