@@ -11,7 +11,7 @@ def hello_world_v2():
 
 @app.route('/Ml9799')
 def Ml9799():
-    return 'Ml9799 write in VScode'
+    return 'Ml9799 write in VScode and GitKraken'
 
 @app.route('/edmanuk')
 def edmanuk():
