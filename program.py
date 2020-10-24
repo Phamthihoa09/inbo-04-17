@@ -40,4 +40,3 @@ def about():
 @app.route('/megurt')
 def megurtfunc():
     return 'test task'
-
