@@ -9,6 +9,6 @@ def hello_world():
 def hello_world_v2():
     return 'Another text'
 
-@app.route('/capchik')
+@app.route('/shistick98')
 def capchik():
-    return 'CAPCHIK task'
+    return 'I am Dmitrii Shesterikov inbo-04-17cd'
