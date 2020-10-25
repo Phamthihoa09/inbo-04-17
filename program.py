@@ -16,11 +16,11 @@ def hello_world_v2():
 
 @app.route('/Ml9799')
 def Ml9799():
-    return 'Ml9799 write in VScode'
+    return 'Ml9799 write in VScode and GitKraken'
 
 @app.route('/edmanuk')
 def edmanuk():
-    return 'Good day!!!'
+    return 'Good evening!!!'
 
 @app.route('/capchik')
 def capchik():
@@ -46,6 +46,9 @@ def about():
 def megurtfunc():
     return 'test task'
 
+@app.route('/NewPage')
+def megurtfunc():
+    return 'Welcome to New page'
 
 if __name__ == '__main__':
     app.secret_key = os.urandom(12)
