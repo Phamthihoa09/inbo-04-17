@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 import hashlib
 
-engine = create_engine('sqlite:///main.db', echo=True)
+engine = create_engine('sqlite:///auth/users.db', echo=True)
 Base = declarative_base()
 
 
@@ -17,13 +17,25 @@ class User(Base):
     """"""
     __tablename__ = "users"
     id = Column(Integer, primary_key=True)
-    username = Column(String)
+    username = Column(String, unique=True)
+    last_name = Column(String, nullable=True)
+    middle_name = Column(String, nullable=True)
+    first_name = Column(String, nullable=True)
     password = Column(String)
 
-    def __init__(self, username, password):
+    def __init__(self,
+                 username,
+                 password,
+                 first_name=None,
+                 last_name=None,
+                 middle_name=None,
+                 ):
         """"""
         self.username = username
         self.password = calculate_digest(password)
+        self.first_name = first_name
+        self.last_name = last_name
+        self.middle_name = middle_name
 
 
 # create tables
