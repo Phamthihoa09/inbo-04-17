@@ -46,8 +46,8 @@
             </li>
 
         </ul>
-        {% if log_out %}
-            <form method="get" action="/logout">
+        {% if not log_out %}
+            <form method="get" action="{{ url_for('auth_app.logout') }}">
                 <button class="btn btn-outline-white btn-md mr-0" type="submit">
                     Log out
                 </button>

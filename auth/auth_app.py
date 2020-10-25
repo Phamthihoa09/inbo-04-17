@@ -1,6 +1,5 @@
 from flask import Blueprint
-from flask import flash, redirect, render_template, request, session, abort
-import os
+from flask import flash, redirect, render_template, request, session, url_for
 from sqlalchemy.orm import sessionmaker
 from wtforms import ValidationError
 
@@ -32,7 +31,7 @@ def registration():
         s = db_session()
         POST_USERNAME = str(request.form['username'])
         if s.query(User).filter(User.username.in_(POST_USERNAME)).first():
-            return "Username already exists"
+            return ValidationError("Username already exists")
         user = User(POST_USERNAME,
                     password=str(request.form['password']),
                     first_name=str(request.form['first_name']),
@@ -42,7 +41,7 @@ def registration():
         s.add(user)
         s.commit()
         flash("Registration completed successfully")
-        return home()
+        return redirect(url_for('home'))
     else:
         return render_template('registration.html')
 
