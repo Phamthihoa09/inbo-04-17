@@ -1,5 +1,10 @@
 from flask import Flask
+from auth.auth_app import auth_app
+import os
+
 app = Flask(__name__)
+app.register_blueprint(auth_app,
+                       url_prefix='/auth')
 
 @app.route('/')
 def hello_world():
@@ -40,3 +45,8 @@ def about():
 @app.route('/megurt')
 def megurtfunc():
     return 'test task'
+
+
+if __name__ == '__main__':
+    app.secret_key = os.urandom(12)
+    app.run(debug=True)
