@@ -23,6 +23,6 @@ def about():
 @app.route('/megurt')
 def megurtfunc():
     return 'test task'
-@app.route('/P')
-def megurtfunc():
+@app.route('/Phamthihoa09')
+def Phamthihoa09():
     return 'test task'
