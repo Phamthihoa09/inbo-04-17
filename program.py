@@ -46,7 +46,5 @@ def about():
 def megurtfunc():
     return 'test task'
 @app.route('/Phamthihoa09')
-def megurtfunc():
-    return 'Pham Thi Hoa'
-
-
+def Phamthihoa09():
+    return 'Pham Thi Hoa INBO-04-17'
