@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if session['logged_in'] %}
+        You're logged in already!
+    {% else %}
+
+        <div class="container" style="margin-top: 12rem">
+            <div class="row justify-content-md-center">
+                <div class="col col-md-5">
+                    <!-- login form -->
+                    <form action="{{ url_for('auth_app.login') }}" method="POST"
+                          class="text-center mdb-color lighten-2 border border-light p-5">
+                        <p class="h4 mb-4">Log in</p>
+                        <!-- Login -->
+                        <div class="input-group flex-nowrap mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="addon-wrapping">@</span>
+                            </div>
+                            <input type="text" aria-label="Username" name="username" placeholder="Username"
+                                   id="LoginFormUsername" class="form-control" aria-describedby="addon-wrapping">
+                        </div>
+                        <!-- Password -->
+                        <input type="password" name="password" id="LoginFormPassword"
+                               class="form-control mb-4" placeholder="Password">
+                        <!-- Sign in button -->
+                        <input class="btn btn-info btn-block my-4" type="submit" value="Авторизоваться">
+                        </input>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- login form -->
+    {% endif %}
+{% endblock %};
+

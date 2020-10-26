@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+    .view {
+        overflow: visible;
+        margin-top: -56px;
+    }
+}
+.navbar {
+    z-index: 1;
+}
+
+body{
+    background: #3b465e;
+}
+
+#myTabContentMD{
+    white-space: pre-wrap;
+}
